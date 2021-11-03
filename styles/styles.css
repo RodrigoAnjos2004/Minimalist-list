@@ -1,0 +1,71 @@
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #111;
+    
+    font-family: 'Poppins', sans-serif;
+}
+
+
+ul {
+    position: relative;
+}
+ul li {
+    position: relative;
+    list-style: none;
+    word-spacing: 10px;
+}
+ul li a {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 4em;
+    font-weight: 800;
+    color: rgba(255, 255, 255, .1);
+}
+
+
+ul li a:before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url('https://media1.tenor.com/images/3cbf9f4e9521c05d2162d201cd35ae0c/tenor.gif?itemid=8870480');
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-repeat: repeat-x;
+    animation: wave 2s linear infinite;
+    transition: .8s;
+    width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+}
+ul li a:hover:before {
+    width: 100%;
+}
+
+
+*   ANIMATION SIMPLES
+
+
+@keyframes wave {
+    0% {
+        background-position: 0px;
+    }
+    100% {
+        background-position: 100px;
+    }
+}
